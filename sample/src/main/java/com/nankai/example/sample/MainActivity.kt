@@ -19,15 +19,5 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding: ActivityMainBinding = DataBindingUtil.setContentView(this,R.layout.activity_main)
-        findViewById<RecyclerView>(R.id.list_menu).adapter =
     }
-
-    class MenuAdapter() : ListAdapter<MenuBean,MenuAdapter.ViewHolder>() {
-
-        class ViewHolder(private val binding:) {
-
-        }
-
-    }
-
 }
