@@ -4,7 +4,6 @@ apply plugin: 'kotlin-android'
 dependencies {
     implementation project(':sample')
     implementation project(':base')
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
 repositories {
     mavenCentral()
