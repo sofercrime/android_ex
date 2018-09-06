@@ -2,11 +2,13 @@ package com.nankai.example.utilities
 
 import java.util.concurrent.Executors
 
-private val IO_EXECUTOR = Executors.newSingleThreadExecutor()
+object runOnIoThread {
 
-/**
- * Utility method to run blocks on a dedicated background thread, used for io/database work.
- */
-fun runOnIoThread(f: () -> Unit) {
-    IO_EXECUTOR.execute(f)
+    private val IO_EXECUTOR = Executors.newSingleThreadExecutor()
+    /**
+     * Utility method to run blocks on a dedicated background thread, used for io/database work.
+     */
+    fun runOnIoThread(f: () -> Unit) {
+        IO_EXECUTOR.execute(f)
+    }
 }

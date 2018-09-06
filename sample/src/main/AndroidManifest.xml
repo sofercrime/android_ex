@@ -12,8 +12,10 @@
 
                 <data
                     android:host="com.nankai.example"
-                    android:pathPrefix="/sample"
-                    android:scheme="https" />
+                    android:pathPrefix="/sample" />
+                <data android:scheme="https" />
+                <data android:scheme="http" />
+
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
