@@ -3,7 +3,7 @@
 buildscript {
     // Define versions in a single place
     ext {
-        kotlin_version = '1.2.60'
+        kotlin_version = '1.2.61'
         compileSdkVersion = 28
         minSdkVersion = 21
         targetSdkVersion = 28

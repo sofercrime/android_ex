@@ -3,7 +3,7 @@
     package="com.nankai.example.sample">
 
     <application>
-        <activity android:name=".MainActivity">
+        <activity android:name=".menus.MenuListActivity">
             <intent-filter android:order="1">
                 <action android:name="android.intent.action.VIEW" />
 
