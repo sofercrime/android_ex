@@ -11,7 +11,8 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/base" />
             <option value="$PROJECT_DIR$/instantapp" />
-            <option value="$PROJECT_DIR$/sample" />
+            <option value="$PROJECT_DIR$/menus" />
+            <option value="$PROJECT_DIR$/roomdata" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

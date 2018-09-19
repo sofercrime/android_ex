@@ -14,8 +14,12 @@ object NavigationUtil {
         invokeDeepLink(context, String.format(Locale.US, "%s/", ROOT_ENDPOINT))
     }
 
-    fun goToSample(context: Context) {
-        invokeDeepLink(context, String.format(Locale.US, "%s/sample", ROOT_ENDPOINT))
+    fun goToMenus(context: Context) {
+        invokeDeepLink(context, String.format(Locale.US, "%s/menus", ROOT_ENDPOINT))
+    }
+
+    fun goToRoomData(context: Context){
+        invokeDeepLink(context,String.format(Locale.US,"%s/roomdata", ROOT_ENDPOINT))
     }
 
     private fun invokeDeepLink(context: Context, deepLink: String) {
