@@ -7,8 +7,6 @@ apply plugin: 'kotlin-android-extensions'
 android {
     compileSdkVersion rootProject.compileSdkVersion
 
-
-
     defaultConfig {
         minSdkVersion rootProject.minSdkVersion
         targetSdkVersion rootProject.targetSdkVersion
@@ -19,7 +17,10 @@ android {
 
     }
 
+    dataBinding {
+        enabled = true
 
+    }
 }
 
 dependencies {
