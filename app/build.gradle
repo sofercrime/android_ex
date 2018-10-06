@@ -26,8 +26,11 @@ android {
 }
 
 dependencies {
-    implementation project(':sample')
+
     implementation project(':base')
+    implementation project(':menus')
+    implementation project(':roomdata')
+
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
 repositories {
