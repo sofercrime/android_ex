@@ -1,0 +1,12 @@
+apply plugin: 'com.android.instantapp'
+apply plugin: 'kotlin-android'
+
+dependencies {
+    api project(':base')
+    implementation project(':menus')
+    implementation project(':roomdata')
+
+}
+repositories {
+    mavenCentral()
+}
