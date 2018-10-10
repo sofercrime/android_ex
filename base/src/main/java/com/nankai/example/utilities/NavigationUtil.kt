@@ -22,6 +22,14 @@ object NavigationUtil {
         invokeDeepLink(context,String.format(Locale.US,"%s/roomdata", ROOT_ENDPOINT))
     }
 
+    fun goToNavigation(context: Context){
+        invokeDeepLink(context,String.format(Locale.US,"%s/navigation", ROOT_ENDPOINT))
+    }
+
+    fun goToWorker(context: Context){
+        invokeDeepLink(context,String.format(Locale.US,"%s/worker", ROOT_ENDPOINT))
+    }
+
     private fun invokeDeepLink(context: Context, deepLink: String) {
         val intent = Intent(Intent.ACTION_VIEW, Uri.parse(deepLink))
         intent.addCategory(Intent.CATEGORY_BROWSABLE)

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="menus"
+            type="com.nankai.example.menus.data.Menu" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/item_menu_icon"
+            android:layout_width="@dimen/icon_item_menus_35dp"
+            android:layout_height="@dimen/icon_item_menus_35dp"
+            android:src="@{menus.icon}" />
+
+        <TextView
+            android:layout_marginStart="8dp"
+            android:id="@+id/item_menu_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{menus.title}"
+            app:layout_constraintLeft_toRightOf="@id/item_menu_icon"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{menus.description}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/item_menu_icon"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/item_menu_content" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

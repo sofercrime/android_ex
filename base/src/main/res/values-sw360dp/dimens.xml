@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="spacing_0_4dp">4.0dip</dimen>
+    <dimen name="spacing_1_6dp">6.0dip</dimen>
+    <dimen name="spacing_1_8dp">8.0dip</dimen>
+    <dimen name="spacing_2_16dp">16.0dip</dimen>
+    <dimen name="spacing_3_24dp">24.0dip</dimen>
+    <dimen name="spacing_3_30dp">30.0dip</dimen>
+    <dimen name="spacing_4_32dp">32.0dip</dimen>
+    <dimen name="spacing_5_40dp">40.0dip</dimen>
+    <dimen name="spacing_6_default_48dp">48.0dip</dimen>
+    <dimen name="spacing_7_56dp">56.0dip</dimen>
+    <dimen name="spacing_8_64dp">64.0dip</dimen>
+    <dimen name="spacing_9_72dp">72.0dip</dimen>
+    <dimen name="text_0_8sp">8.0sp</dimen>
+    <dimen name="text_1_10sp">10.0sp</dimen>
+    <dimen name="text_2_12sp">12.0sp</dimen>
+    <dimen name="text_3_14sp">14.0sp</dimen>
+    <dimen name="text_4_medium_16sp">16.0sp</dimen>
+    <dimen name="text_5_20sp">20.0sp</dimen>
+    <dimen name="text_6_24sp">24.0sp</dimen>
+    <dimen name="text_7_28sp">28.0sp</dimen>
+    <dimen name="text_8_32sp">32.0sp</dimen>
+    <dimen name="text_9_36sp">36.0sp</dimen>
+</resources>

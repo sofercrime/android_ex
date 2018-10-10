@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="spacing_0_4dp">2.0dip</dimen>
+    <dimen name="spacing_1_6dp">3.5dip</dimen>
+    <dimen name="spacing_1_8dp">5.0dip</dimen>
+    <dimen name="spacing_2_16dp">10.0dip</dimen>
+    <dimen name="spacing_3_24dp">16.0dip</dimen>
+    <dimen name="spacing_3_30dp">20.0dip</dimen>
+    <dimen name="spacing_4_32dp">22.0dip</dimen>
+    <dimen name="spacing_5_40dp">28.0dip</dimen>
+    <dimen name="spacing_6_default_48dp">34.0dip</dimen>
+    <dimen name="spacing_7_56dp">40.0dip</dimen>
+    <dimen name="spacing_8_64dp">46.0dip</dimen>
+    <dimen name="spacing_9_72dp">52.0dip</dimen>
+</resources>
