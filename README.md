@@ -1,2 +1,2 @@
 # Android_Example
-Android Example
+Sample for android jetpack and instant app
