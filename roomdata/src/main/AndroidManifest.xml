@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.nankai.example.roomdata">
 
-    <application android:fullBackupContent="@xml/backup_descriptor">
+    <application>
         <activity android:name=".RoomDataActivity">
             <intent-filter android:order="1">
                 <action android:name="android.intent.action.VIEW" />

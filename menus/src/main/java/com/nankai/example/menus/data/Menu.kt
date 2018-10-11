@@ -1,3 +1,3 @@
 package com.nankai.example.menus.data
 
-data class Menu(val id: String, val title: String, val description: String, val icon: String)
+data class Menu(val id: Int, val title: String, val description: String, val icon: Int)

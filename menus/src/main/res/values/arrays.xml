@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="menus_title">
+        <item>Navigation</item>
+        <item>RoomData</item>
+        <item>ViewModel</item>
+    </string-array>
+
+    <string-array name="menus_description">
+        <item>Sample Navigation</item>
+        <item>Sample RoomData</item>
+        <item>Sample ViewModel</item>
+    </string-array>
+
+    <integer-array name="menus_icon">
+        <item>@drawable/ic_menu_navigation_gray_24dp</item>
+        <item>@drawable/ic_menu_roomdata_gray_24dp</item>
+        <item>@drawable/ic_menu_viewmodel_gray_24dp</item>
+    </integer-array>
+</resources>

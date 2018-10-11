@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener" />
         <variable
             name="menus"
             type="com.nankai.example.menus.data.Menu" />
@@ -11,6 +13,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
+        android:onClick="@{clickListener}"
         android:layout_height="wrap_content">
 
         <ImageView
@@ -21,7 +24,7 @@
 
         <TextView
             android:layout_marginStart="8dp"
-            android:id="@+id/item_menu_content"
+            android:id="@+id/item_menu_title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@{menus.title}"
@@ -30,13 +33,14 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:id="@+id/item_menu_description"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@{menus.description}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toRightOf="@id/item_menu_icon"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/item_menu_content" />
+            app:layout_constraintTop_toBottomOf="@id/item_menu_title" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
