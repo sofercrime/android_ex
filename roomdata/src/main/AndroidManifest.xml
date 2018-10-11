@@ -3,8 +3,15 @@
     package="com.nankai.example.roomdata">
 
     <application>
-        <activity android:name=".RoomDataActivity">
-            <intent-filter android:order="1">
+        <activity
+            android:label="@string/title_room_data"
+            android:name=".RoomDataActivity"
+            android:relinquishTaskIdentity="true"
+            android:theme="@style/AppTheme">
+
+            <intent-filter
+                android:autoVerify="true"
+                android:order="1">
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.BROWSABLE" />
@@ -15,12 +22,6 @@
                     android:pathPrefix="/roomdata" />
                 <data android:scheme="https" />
                 <data android:scheme="http" />
-            </intent-filter>
-
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>
