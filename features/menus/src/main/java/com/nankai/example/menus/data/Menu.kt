@@ -1,3 +1,6 @@
 package com.nankai.example.menus.data
 
-data class Menu(val id: Int, val title: String, val description: String, val icon: Int)
+import androidx.databinding.BaseObservable
+import androidx.databinding.Bindable
+
+data class Menu(val id: Int, val title: String, val description: String,@Bindable val icon: Int) : BaseObservable()

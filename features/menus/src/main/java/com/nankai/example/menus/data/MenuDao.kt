@@ -7,19 +7,26 @@ import com.nankai.example.menus.R
 
 class MenuDao {
     public fun getMenus(context: Context): LiveData<List<Menu>> {
+
         val menus = mutableListOf<Menu>()
+        val resource = context.resources;
+
+        val icons = resource.obtainTypedArray(R.array.menus_icon)
+
         for (i in 0..2) {
-            val resource = context.resources
+          val iconId =   icons.getResourceId(i, -1)
             menus.add(
                     Menu(
                             i
                             , resource.getStringArray(R.array.menus_title)[i]
                             , resource.getStringArray(R.array.menus_description)[i]
-                            , resource.getIntArray(R.array.menus_icon)[i]
+                            , iconId
                     ))
         }
         val mutableList = MutableLiveData<List<Menu>>()
         mutableList.postValue(menus)
+
+        icons.recycle()
         return mutableList
     }
 }

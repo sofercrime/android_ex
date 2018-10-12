@@ -6,6 +6,7 @@
         <variable
             name="clickListener"
             type="android.view.View.OnClickListener" />
+
         <variable
             name="menus"
             type="com.nankai.example.menus.data.Menu" />
@@ -13,21 +14,23 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:onClick="@{clickListener}"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:onClick="@{clickListener}">
 
         <ImageView
             android:id="@+id/item_menu_icon"
             android:layout_width="@dimen/icon_item_menus_35dp"
             android:layout_height="@dimen/icon_item_menus_35dp"
-            android:src="@{menus.icon}" />
 
+            android:contentDescription="@string/images_content_description" />
+        <!--app:srcVector="@drawable/ic_menu_viewmodel_gray_24dp"-->
         <TextView
-            android:layout_marginStart="8dp"
             android:id="@+id/item_menu_title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_1_8dp"
             android:text="@{menus.title}"
+            android:textStyle="bold"
             app:layout_constraintLeft_toRightOf="@id/item_menu_icon"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -36,6 +39,7 @@
             android:id="@+id/item_menu_description"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_1_8dp"
             android:text="@{menus.description}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toRightOf="@id/item_menu_icon"

@@ -2,6 +2,8 @@ package com.nankai.example.menus
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.databinding.BindingMethod
+import androidx.databinding.BindingMethods
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.*
 import androidx.recyclerview.widget.LinearLayoutManager
