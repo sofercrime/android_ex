@@ -1,1 +1,1 @@
-include ':app', ':base', ':instantapp', ':menus', ':roomdata'
+include ':installed', ':instantapp', ':base',  ':menus', ':roomdata'

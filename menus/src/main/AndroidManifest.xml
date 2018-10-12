@@ -3,25 +3,34 @@
     package="com.nankai.example.menus">
 
     <application>
-        <activity android:name=".MenuActivity">
-            <intent-filter android:order="1">
+        <activity
+            android:name=".MenuActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <intent-filter
+                android:autoVerify="true"
+                android:order="1">
+
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.BROWSABLE" />
                 <category android:name="android.intent.category.DEFAULT" />
 
-                <data
-                    android:host="com.nankai.example"
-                    android:pathPrefix="/menus" />
+                <data android:host="com.nankai.example" />
+                <data android:pathPrefix="/menus" />
                 <data android:scheme="https" />
                 <data android:scheme="http" />
             </intent-filter>
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
+            <meta-data
+                android:name="default-url"
+                android:value="https://com.nankai.example/menus" />
         </activity>
     </application>
 

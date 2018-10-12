@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Android Example</string>
+    <string name="title_room_data">Room Data</string>
 </resources>
