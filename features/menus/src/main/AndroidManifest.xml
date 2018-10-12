@@ -27,10 +27,6 @@
                 <data android:scheme="https" />
                 <data android:scheme="http" />
             </intent-filter>
-
-            <meta-data
-                android:name="default-url"
-                android:value="https://com.nankai.example/menus" />
         </activity>
     </application>
 

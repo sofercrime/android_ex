@@ -8,7 +8,7 @@ android {
 
 
     defaultConfig {
-        applicationId "com.nankai.example.app"
+        applicationId "com.nankai.example"
         minSdkVersion rootProject.minSdkVersion
         targetSdkVersion rootProject.targetSdkVersion
         versionCode 1
@@ -29,8 +29,8 @@ android {
 dependencies {
 
     implementation project(':base')
-    implementation project(':menus')
-    implementation project(':roomdata')
+    implementation project(':feature_menus')
+    implementation project(':feature_roomdata')
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }

@@ -3,8 +3,8 @@ apply plugin: 'kotlin-android'
 
 dependencies {
     api project(':base')
-    implementation project(':menus')
-    implementation project(':roomdata')
+    implementation project(':feature_menus')
+    implementation project(':feature_roomdata')
 
 }
 repositories {

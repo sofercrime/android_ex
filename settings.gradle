@@ -1,1 +1,6 @@
-include ':installed', ':instantapp', ':base',  ':menus', ':roomdata'
+include ':installed', ':instant', ':base',  ':feature_menus', ':feature_roomdata'
+project(':installed').projectDir = new File('installed')
+project(':instant').projectDir = new File('instant')
+project(':base').projectDir = new File('base')
+project(':feature_menus').projectDir = new File('features/menus')
+project(':feature_roomdata').projectDir = new File('features/roomdata')

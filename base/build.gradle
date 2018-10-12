@@ -37,6 +37,6 @@ dependencies {
     api 'com.android.support:design:28.0.0'
 
     application project(':installed')
-    feature project(":menus")
-    feature project(":roomdata")
+    feature project(":feature_menus")
+    feature project(":feature_roomdata")
 }

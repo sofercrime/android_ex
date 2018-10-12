@@ -8,7 +8,7 @@ import com.nankai.example.menus.R
 class MenuDao {
     public fun getMenus(context: Context): LiveData<List<Menu>> {
         val menus = mutableListOf<Menu>()
-        for (i in 1..3) {
+        for (i in 0..2) {
             val resource = context.resources
             menus.add(
                     Menu(
