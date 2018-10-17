@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.nankai.example.menus">
 
     <application>
@@ -15,7 +16,8 @@
 
             <intent-filter
                 android:autoVerify="true"
-                android:order="1">
+                android:order="1"
+                tools:targetApi="m">
 
                 <action android:name="android.intent.action.VIEW" />
 
