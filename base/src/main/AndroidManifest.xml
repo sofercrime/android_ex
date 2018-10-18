@@ -3,17 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.nankai.example">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
+        android:theme="@style/App"
         tools:ignore="GoogleAppIndexingWarning">
-        <meta-data
-            android:name="aia-compat-api-min-version"
-            android:value="1" />
+        <!--<meta-data-->
+            <!--android:name="aia-compat-api-min-version"-->
+            <!--android:value="1" />-->
     </application>
 
 </manifest>

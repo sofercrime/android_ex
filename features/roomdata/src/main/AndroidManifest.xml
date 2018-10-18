@@ -5,26 +5,24 @@
 
     <application>
         <activity
-            android:relinquishTaskIdentity="true"
+            android:name="com.nankai.example.roomdata.RoomDataActivity"
             android:label="@string/title_room_data"
-            android:name=".RoomDataActivity"
-            android:theme="@style/AppTheme">
+            android:parentActivityName="com.nankai.example.menus.MenuActivity"
+            android:theme="@style/App">
 
-            <intent-filter
-                android:autoVerify="true"
-                android:order="2"
-                tools:targetApi="m">
+
+            <intent-filter android:order="2">
                 <action android:name="android.intent.action.VIEW" />
 
-                <category android:name="android.intent.category.BROWSABLE" />
                 <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
 
-                <data
-                    android:host="com.nankai.example"
-                    android:pathPrefix="/roomdata" />
-                <data android:scheme="https" />
                 <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="instantapp.com.nankai.example" />
+                <data android:pathPrefix="/roomdata" />
             </intent-filter>
+
         </activity>
     </application>
 

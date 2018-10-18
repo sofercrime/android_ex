@@ -5,26 +5,26 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.nankai.example.menus.R
 import com.nankai.example.menus.data.Menu
-import com.nankai.example.menus.databinding.ItemMenuBinding
 import com.nankai.example.utilities.NavigationUtil
+import kotlinx.android.synthetic.main.item_menu.view.*
 
 class MenuAdapter : ListAdapter<Menu, MenuAdapter.ViewHolder>(MenuDiffcallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(ItemMenuBinding.inflate(
-                LayoutInflater.from(parent.context), parent, false))
+        return ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_menu, parent, false))
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val menu = getItem(position)
         holder.apply {
-            bindData(createClickListenener(menu.id), menu)
+            bindData(createClickListener(menu.id), menu)
             itemView.tag = menu
         }
     }
 
-    private fun createClickListenener(id: Int): View.OnClickListener {
+    private fun createClickListener(id: Int): View.OnClickListener {
         return View.OnClickListener {
             when (id) {
                 1 -> {
@@ -34,14 +34,12 @@ class MenuAdapter : ListAdapter<Menu, MenuAdapter.ViewHolder>(MenuDiffcallback()
         }
     }
 
-    class ViewHolder(
-            private val binding: ItemMenuBinding
-    ) : RecyclerView.ViewHolder(binding.root) {
+    class ViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
         fun bindData(listener: View.OnClickListener, item: Menu) {
-            binding.apply {
-                menus = item
-                clickListener = listener
-            }
+            view.itemMenuIcon.setImageResource(item.icon)
+            view.itemMenuTitle.text = item.title
+            view.itemMenuDescription.text = item.description
+            view.setOnClickListener(listener)
         }
     }
 }

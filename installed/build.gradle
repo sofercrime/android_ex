@@ -36,9 +36,9 @@ android {
 
 dependencies {
 
-    api project(':base')
-    api project(':feature_menus')
-    api project(':feature_roomdata')
+    implementation project(':base')
+    implementation project(':feature_menus')
+    implementation project(':feature_roomdata')
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$KOTLIN_VERSION"
 }

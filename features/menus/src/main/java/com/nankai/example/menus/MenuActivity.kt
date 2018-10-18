@@ -2,13 +2,12 @@ package com.nankai.example.menus
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.*
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.nankai.example.menus.adapters.MenuAdapter
-import com.nankai.example.menus.databinding.ActivityMenuBinding
 import com.nankai.example.menus.utilities.InjectorUtils
 import com.nankai.example.menus.viewmodels.MenuViewModel
+import kotlinx.android.synthetic.main.activity_menu.*
 
 class MenuActivity : AppCompatActivity(), LifecycleOwner{
 
@@ -17,15 +16,15 @@ class MenuActivity : AppCompatActivity(), LifecycleOwner{
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding: ActivityMenuBinding = DataBindingUtil.setContentView(this, R.layout.activity_menu)
+        setContentView(R.layout.activity_menu)
         val  context = baseContext
 
         val factory = InjectorUtils.provideMenuViewModelFactory(context)
         viewModel = ViewModelProvider(this,factory).get(MenuViewModel::class.java)
         val adapter = MenuAdapter()
 
-        binding.activityMenuList.layoutManager = LinearLayoutManager(context)
-        binding.activityMenuList.adapter = adapter
+        activityMenuList.layoutManager = LinearLayoutManager(context)
+        activityMenuList.adapter = adapter
         mLifecycleRegistry = LifecycleRegistry(this)
         mLifecycleRegistry.markState(Lifecycle.State.CREATED)
         subscribeUi(adapter)

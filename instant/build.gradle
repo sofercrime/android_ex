@@ -2,6 +2,20 @@ apply plugin: 'com.android.instantapp'
 
 apply plugin: 'kotlin-android'
 
+
+android {
+    compileSdkVersion rootProject.COMPILE_SDK_VERSION
+
+    defaultConfig {}
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
 dependencies {
     api project(':base')
     implementation project(':feature_menus')

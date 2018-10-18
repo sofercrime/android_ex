@@ -6,10 +6,10 @@ import androidx.lifecycle.MutableLiveData
 import com.nankai.example.menus.R
 
 class MenuDao {
-    public fun getMenus(context: Context): LiveData<List<Menu>> {
+    fun getMenus(context: Context): LiveData<List<Menu>> {
 
         val menus = mutableListOf<Menu>()
-        val resource = context.resources;
+        val resource = context.resources
 
         val icons = resource.obtainTypedArray(R.array.menus_icon)
 

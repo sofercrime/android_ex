@@ -5,30 +5,32 @@
 
     <application>
         <activity
-            android:name=".MenuActivity"
+            android:name="com.nankai.example.menus.MenuActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme">
+            android:theme="@style/App">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
-            <intent-filter
-                android:autoVerify="true"
-                android:order="1"
-                tools:targetApi="m">
+            <meta-data
+                android:name="default-url"
+                android:value="http://instantapp.com.nankai.example/menus" />
 
+            <intent-filter android:order="1">
                 <action android:name="android.intent.action.VIEW" />
 
-                <category android:name="android.intent.category.BROWSABLE" />
                 <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
 
-                <data android:host="com.nankai.example" />
-                <data android:pathPrefix="/menus" />
                 <data android:scheme="https" />
                 <data android:scheme="http" />
+                <data android:host="instantapp.com.nankai.example" />
+                <data android:pathPrefix="/menus" />
+
             </intent-filter>
+
         </activity>
     </application>
 

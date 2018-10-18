@@ -1,51 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
-    <data>
-        <variable
-            name="clickListener"
-            type="android.view.View.OnClickListener" />
-
-        <variable
-            name="menus"
-            type="com.nankai.example.menus.data.Menu" />
-    </data>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
+    <ImageView
+        android:id="@+id/itemMenuIcon"
+        android:layout_width="@dimen/icon_item_menus_35dp"
+        android:layout_height="@dimen/icon_item_menus_35dp"
+        android:contentDescription="@string/images_content_description" />
+    <!--app:srcVector="@drawable/ic_menu_viewmodel_gray_24dp"-->
+    <TextView
+        android:id="@+id/itemMenuTitle"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:onClick="@{clickListener}">
+        android:layout_marginStart="@dimen/spacing_1_8dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/itemMenuIcon"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/item_menu_icon"
-            android:layout_width="@dimen/icon_item_menus_35dp"
-            android:layout_height="@dimen/icon_item_menus_35dp"
+    <TextView
+        android:id="@+id/itemMenuDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_1_8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/itemMenuIcon"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemMenuTitle" />
 
-            android:contentDescription="@string/images_content_description" />
-        <!--app:srcVector="@drawable/ic_menu_viewmodel_gray_24dp"-->
-        <TextView
-            android:id="@+id/item_menu_title"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/spacing_1_8dp"
-            android:text="@{menus.title}"
-            android:textStyle="bold"
-            app:layout_constraintLeft_toRightOf="@id/item_menu_icon"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/item_menu_description"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/spacing_1_8dp"
-            android:text="@{menus.description}"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toRightOf="@id/item_menu_icon"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/item_menu_title" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-</layout>
+</androidx.constraintlayout.widget.ConstraintLayout>
